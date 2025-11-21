@@ -1,7 +1,9 @@
-CREATE DATABASE moviesdb;
+CREATE USER thierry WITH PASSWORD 'Toto1234=';
+CREATE DATABASE moviesdb OWNER thierry;
+GRANT ALL PRIVILEGES ON DATABASE moviesdb TO thierry;
 
 \l
-\c moviesdb;
+\c moviesdb thierry
 
 CREATE TABLE Movie
 (
