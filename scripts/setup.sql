@@ -11,6 +11,8 @@ CREATE TABLE Movie
     Title varchar(255) not null,
     TitleCA varchar(255) not null,
     Year int not null,
+    EntryDate timestamp not null
+        CONSTRAINT DF_movie_EntryDate DEFAULT (CURRENT_TIMESTAMP),
     constraint pk_movie primary key (id)
 );
 
